@@ -12,7 +12,6 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Comparator;
 import java.util.List;
 
 public class BusServiceAnalyser {
@@ -61,7 +60,10 @@ public class BusServiceAnalyser {
         return busServiceList;
     }
 
+    public List<BusService> totalCollectionMadeFromSale(){
+        List<BusService> busServiceList = new ArrayList<>();
 
-
+        return busServiceList;
+    }
 
 }
