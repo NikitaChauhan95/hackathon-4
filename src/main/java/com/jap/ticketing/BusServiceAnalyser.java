@@ -12,6 +12,7 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Iterator;
 import java.util.List;
 
 public class BusServiceAnalyser {
@@ -30,7 +31,6 @@ public class BusServiceAnalyser {
         } catch (IOException e) {
             throw new RuntimeException(e.getMessage());
         }
-        System.out.println("count - " + countLines);
         try (BufferedReader bufferedReader = new BufferedReader(new FileReader(fileName))) {
             String line = bufferedReader.readLine();
             while ((line = bufferedReader.readLine()) != null) {
@@ -60,10 +60,14 @@ public class BusServiceAnalyser {
         return busServiceList;
     }
 
-    public List<BusService> totalCollectionMadeFromSale(){
+    public int totalCollectionMadeFromSale(){
         List<BusService> busServiceList = new ArrayList<>();
-
-        return busServiceList;
+        Iterator<BusService> iterator = busServiceList.iterator();
+        int totalTicketAmount = 0;
+        while ((iterator.hasNext())){
+            totalTicketAmount += iterator.next().getTotalTicketAmount();
+        }
+        return totalTicketAmount;
     }
 
 }
