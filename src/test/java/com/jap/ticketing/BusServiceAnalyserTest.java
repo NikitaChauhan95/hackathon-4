@@ -1,6 +1,7 @@
 package com.jap.ticketing;
 
 import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -16,8 +17,7 @@ class BusServiceAnalyserTest {
     @BeforeEach
     void setUp() {
         busServiceAnalyser = new BusServiceAnalyser();
-        busService = new BusService("KIAS-12/5","KIAS-12UP",9387,1,
-                11359,39,"01/09/2018","02:02:58",281,49.3);
+        busService = new BusService("KIAS-12/5", "KIAS-12UP", 9387, 1, 11359, 39, "01/09/2018", "02:02:58", 281, 49.3);
     }
 
     @AfterEach
@@ -29,7 +29,17 @@ class BusServiceAnalyserTest {
     @Test
     void readFile() {
         List<BusService> output = busServiceAnalyser.readFile(fileName);
-        assertEquals(49,output.size());
+        Assertions.assertEquals(49, output.size());
 
+    }
+
+    @Test
+    void SortTheDistanceTravelledByABus() {
+        List<BusService> output = busServiceAnalyser.readFile(fileName);
+        Assertions.assertEquals(49,output.size());
+    }
+
+    @Test
+    void () {
     }
 }

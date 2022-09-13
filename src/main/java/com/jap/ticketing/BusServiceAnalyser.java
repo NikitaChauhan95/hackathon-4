@@ -11,6 +11,8 @@ import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.List;
 
 public class BusServiceAnalyser {
@@ -53,6 +55,13 @@ public class BusServiceAnalyser {
         }
         return busServiceList;
     }
+
+    public List<BusService> SortTheDistanceTravelledByABus(List<BusService> busServiceList) {
+        Collections.sort(busServiceList,((o1, o2) -> Double.compare(o2.getTravelledKM(), o1.getTravelledKM())));
+        return busServiceList;
+    }
+
+
 
 
 }

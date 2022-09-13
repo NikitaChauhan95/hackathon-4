@@ -7,6 +7,12 @@
 
 package com.jap.ticketing;
 
-public class DistanceComparator {
+import java.util.Comparator;
 
+public class DistanceComparator implements Comparator<BusService> {
+
+    @Override
+    public int compare(BusService o1, BusService o2) {
+        return Double.compare(o1.getTravelledKM(), o2.getTravelledKM());
+    }
 }
