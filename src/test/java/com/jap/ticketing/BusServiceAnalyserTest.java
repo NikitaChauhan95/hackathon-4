@@ -39,7 +39,4 @@ class BusServiceAnalyserTest {
         Assertions.assertEquals(49,output.size());
     }
 
-    @Test
-    void () {
-    }
 }
