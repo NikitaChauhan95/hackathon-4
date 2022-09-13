@@ -131,4 +131,20 @@ public class BusService {
     public int hashCode() {
         return Objects.hash(scheduleNo, routeNo, ticketFromStopId, ticketFromStopSeqNo, ticketTillStopId, ticketTillStopSeqNo, ticketDate, ticketTime, totalTicketAmount, travelledKM);
     }
+
+    @Override
+    public String toString() {
+        return "BusService{" +
+                "scheduleNo='" + scheduleNo + '\'' +
+                ", routeNo='" + routeNo + '\'' +
+                ", ticketFromStopId=" + ticketFromStopId +
+                ", ticketFromStopSeqNo=" + ticketFromStopSeqNo +
+                ", ticketTillStopId=" + ticketTillStopId +
+                ", ticketTillStopSeqNo=" + ticketTillStopSeqNo +
+                ", ticketDate='" + ticketDate + '\'' +
+                ", ticketTime=" + ticketTime +
+                ", totalTicketAmount=" + totalTicketAmount +
+                ", travelledKM=" + travelledKM +
+                '}';
+    }
 }
