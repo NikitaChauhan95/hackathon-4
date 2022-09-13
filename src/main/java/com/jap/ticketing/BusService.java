@@ -7,6 +7,8 @@
 
 package com.jap.ticketing;
 
+import java.util.Objects;
+
 public class BusService {
     private String scheduleNo;
     private String routeNo;
@@ -115,5 +117,18 @@ public class BusService {
 
     public void setTravelledKM(double travelledKM) {
         this.travelledKM = travelledKM;
+    }
+
+    @Override
+    public boolean equals(Object o) {
+        if (this == o) return true;
+        if (o == null || getClass() != o.getClass()) return false;
+        BusService that = (BusService) o;
+        return ticketFromStopId == that.ticketFromStopId && ticketFromStopSeqNo == that.ticketFromStopSeqNo && ticketTillStopId == that.ticketTillStopId && ticketTillStopSeqNo == that.ticketTillStopSeqNo && Double.compare(that.ticketTime, ticketTime) == 0 && totalTicketAmount == that.totalTicketAmount && Double.compare(that.travelledKM, travelledKM) == 0 && Objects.equals(scheduleNo, that.scheduleNo) && Objects.equals(routeNo, that.routeNo) && Objects.equals(ticketDate, that.ticketDate);
+    }
+
+    @Override
+    public int hashCode() {
+        return Objects.hash(scheduleNo, routeNo, ticketFromStopId, ticketFromStopSeqNo, ticketTillStopId, ticketTillStopSeqNo, ticketDate, ticketTime, totalTicketAmount, travelledKM);
     }
 }
