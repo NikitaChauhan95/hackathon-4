@@ -7,7 +7,7 @@ public class Hello {
     public static void main(String[] args) {
         BusServiceAnalyser busServiceAnalyser = new BusServiceAnalyser();
         List<BusService> busServiceList = busServiceAnalyser.readFile("src/main/resources/sample.csv");
-        //System.out.println("busServiceList = " + busServiceList);
+        System.out.println("busServiceList = " + busServiceList);
         List<BusService> sortDistance = busServiceAnalyser.SortTheDistanceTravelledByABus(busServiceList);
         System.out.println("sortDistance = " + sortDistance);
         int totalCollection = busServiceAnalyser.totalCollectionMadeFromSale();

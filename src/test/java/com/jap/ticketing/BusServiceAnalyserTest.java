@@ -36,9 +36,9 @@ class BusServiceAnalyserTest {
     @Test
     void SortTheDistanceTravelledByABus() {
         List<BusService> output = busServiceAnalyser.readFile(fileName);
-        Assertions.assertEquals(49.5,busServiceAnalyser.SortTheDistanceTravelledByABus(output).get(0).getTravelledKM());
-        Assertions.assertEquals(49.5,busServiceAnalyser.SortTheDistanceTravelledByABus(output).get(1).getTravelledKM());
-        Assertions.assertNotEquals(49.3,busServiceAnalyser.SortTheDistanceTravelledByABus(output).get(0).getTravelledKM());
+        Assertions.assertEquals(49.5, busServiceAnalyser.SortTheDistanceTravelledByABus(output).get(0).getTravelledKM());
+        Assertions.assertEquals(49.5, busServiceAnalyser.SortTheDistanceTravelledByABus(output).get(1).getTravelledKM());
+        Assertions.assertNotEquals(49.3, busServiceAnalyser.SortTheDistanceTravelledByABus(output).get(0).getTravelledKM());
 
 
     }
@@ -46,7 +46,7 @@ class BusServiceAnalyserTest {
     @Test
     void totalCollectionMadeFromSale() {
         List<BusService> output = busServiceAnalyser.readFile(fileName);
-        Assertions.assertEquals(0,busServiceAnalyser.totalCollectionMadeFromSale());
+        Assertions.assertEquals(0, busServiceAnalyser.totalCollectionMadeFromSale());
 
     }
 }

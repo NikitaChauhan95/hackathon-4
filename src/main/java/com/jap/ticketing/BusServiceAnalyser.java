@@ -18,6 +18,7 @@ import java.util.List;
 public class BusServiceAnalyser {
 
     int countLines = 0;
+
     public List<BusService> readFile(String fileName) {
         List<BusService> busServiceList = new ArrayList<>();
 
@@ -45,8 +46,7 @@ public class BusServiceAnalyser {
                 String ticketTime = data[7].trim();
                 int totalTicketAmount = Integer.parseInt(data[8].trim());
                 double travelledKM = Double.parseDouble(data[9].trim());
-                BusService busService = new BusService(scheduleNo,routeNo,ticketFromStopId,ticketFromStopSeqNo,
-                        ticketTillStopId,ticketTillStopSeqNo,ticketDate,ticketTime,totalTicketAmount,travelledKM);
+                BusService busService = new BusService(scheduleNo, routeNo, ticketFromStopId, ticketFromStopSeqNo, ticketTillStopId, ticketTillStopSeqNo, ticketDate, ticketTime, totalTicketAmount, travelledKM);
                 busServiceList.add(busService);
             }
         } catch (IOException exception) {
@@ -56,15 +56,15 @@ public class BusServiceAnalyser {
     }
 
     public List<BusService> SortTheDistanceTravelledByABus(List<BusService> busServiceList) {
-        Collections.sort(busServiceList,((o1, o2) -> Double.compare(o2.getTravelledKM(), o1.getTravelledKM())));
+        Collections.sort(busServiceList, ((o1, o2) -> Double.compare(o2.getTravelledKM(), o1.getTravelledKM())));
         return busServiceList;
     }
 
-    public int totalCollectionMadeFromSale(){
+    public int totalCollectionMadeFromSale() {
         List<BusService> busServiceList = new ArrayList<>();
         Iterator<BusService> iterator = busServiceList.iterator();
         int totalTicketAmount = 0;
-        while ((iterator.hasNext())){
+        while ((iterator.hasNext())) {
             totalTicketAmount += iterator.next().getTotalTicketAmount();
         }
         return totalTicketAmount;

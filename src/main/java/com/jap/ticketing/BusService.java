@@ -17,16 +17,14 @@ public class BusService {
     private int ticketTillStopId;
     private int ticketTillStopSeqNo;
     private String ticketDate;
-    private String  ticketTime;
+    private String ticketTime;
     private int totalTicketAmount;
     private double travelledKM;
 
     public BusService() {
     }
 
-    public BusService(String scheduleNo, String routeNo, int ticketFromStopId, int ticketFromStopSeqNo,
-                      int ticketTillStopId, int ticketTillStopSeqNo, String ticketDate, String ticketTime,
-                      int totalTicketAmount, double travelledKM) {
+    public BusService(String scheduleNo, String routeNo, int ticketFromStopId, int ticketFromStopSeqNo, int ticketTillStopId, int ticketTillStopSeqNo, String ticketDate, String ticketTime, int totalTicketAmount, double travelledKM) {
         this.scheduleNo = scheduleNo;
         this.routeNo = routeNo;
         this.ticketFromStopId = ticketFromStopId;
@@ -134,17 +132,6 @@ public class BusService {
 
     @Override
     public String toString() {
-        return "BusService{" +
-                "scheduleNo='" + scheduleNo + '\'' +
-                ", routeNo='" + routeNo + '\'' +
-                ", ticketFromStopId=" + ticketFromStopId +
-                ", ticketFromStopSeqNo=" + ticketFromStopSeqNo +
-                ", ticketTillStopId=" + ticketTillStopId +
-                ", ticketTillStopSeqNo=" + ticketTillStopSeqNo +
-                ", ticketDate='" + ticketDate + '\'' +
-                ", ticketTime=" + ticketTime +
-                ", totalTicketAmount=" + totalTicketAmount +
-                ", travelledKM=" + travelledKM +
-                '}';
+        return "BusService{" + "scheduleNo='" + scheduleNo + '\'' + ", routeNo='" + routeNo + '\'' + ", ticketFromStopId=" + ticketFromStopId + ", ticketFromStopSeqNo=" + ticketFromStopSeqNo + ", ticketTillStopId=" + ticketTillStopId + ", ticketTillStopSeqNo=" + ticketTillStopSeqNo + ", ticketDate='" + ticketDate + '\'' + ", ticketTime=" + ticketTime + ", totalTicketAmount=" + totalTicketAmount + ", travelledKM=" + travelledKM + '}';
     }
 }
