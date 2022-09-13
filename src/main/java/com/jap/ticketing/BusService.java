@@ -17,7 +17,7 @@ public class BusService {
     private int ticketTillStopId;
     private int ticketTillStopSeqNo;
     private String ticketDate;
-    private double ticketTime;
+    private String  ticketTime;
     private int totalTicketAmount;
     private double travelledKM;
 
@@ -25,7 +25,7 @@ public class BusService {
     }
 
     public BusService(String scheduleNo, String routeNo, int ticketFromStopId, int ticketFromStopSeqNo,
-                      int ticketTillStopId, int ticketTillStopSeqNo, String ticketDate, double ticketTime,
+                      int ticketTillStopId, int ticketTillStopSeqNo, String ticketDate, String ticketTime,
                       int totalTicketAmount, double travelledKM) {
         this.scheduleNo = scheduleNo;
         this.routeNo = routeNo;
@@ -95,11 +95,11 @@ public class BusService {
         this.ticketDate = ticketDate;
     }
 
-    public double getTicketTime() {
+    public String getTicketTime() {
         return ticketTime;
     }
 
-    public void setTicketTime(double ticketTime) {
+    public void setTicketTime(String ticketTime) {
         this.ticketTime = ticketTime;
     }
 
@@ -124,7 +124,7 @@ public class BusService {
         if (this == o) return true;
         if (o == null || getClass() != o.getClass()) return false;
         BusService that = (BusService) o;
-        return ticketFromStopId == that.ticketFromStopId && ticketFromStopSeqNo == that.ticketFromStopSeqNo && ticketTillStopId == that.ticketTillStopId && ticketTillStopSeqNo == that.ticketTillStopSeqNo && Double.compare(that.ticketTime, ticketTime) == 0 && totalTicketAmount == that.totalTicketAmount && Double.compare(that.travelledKM, travelledKM) == 0 && Objects.equals(scheduleNo, that.scheduleNo) && Objects.equals(routeNo, that.routeNo) && Objects.equals(ticketDate, that.ticketDate);
+        return ticketFromStopId == that.ticketFromStopId && ticketFromStopSeqNo == that.ticketFromStopSeqNo && ticketTillStopId == that.ticketTillStopId && ticketTillStopSeqNo == that.ticketTillStopSeqNo && totalTicketAmount == that.totalTicketAmount && Double.compare(that.travelledKM, travelledKM) == 0 && Objects.equals(scheduleNo, that.scheduleNo) && Objects.equals(routeNo, that.routeNo) && Objects.equals(ticketDate, that.ticketDate) && Objects.equals(ticketTime, that.ticketTime);
     }
 
     @Override

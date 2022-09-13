@@ -41,7 +41,7 @@ public class BusServiceAnalyser {
                 int ticketTillStopId = Integer.parseInt(data[4].trim());
                 int ticketTillStopSeqNo = Integer.parseInt(data[5].trim());
                 String ticketDate = data[6].trim();
-                double ticketTime = Double.parseDouble(data[7].trim());
+                String ticketTime = data[7].trim();
                 int totalTicketAmount = Integer.parseInt(data[8].trim());
                 double travelledKM = Double.parseDouble(data[9].trim());
                 BusService busService = new BusService(scheduleNo,routeNo,ticketFromStopId,ticketFromStopSeqNo,
@@ -53,4 +53,6 @@ public class BusServiceAnalyser {
         }
         return busServiceList;
     }
+
+
 }
