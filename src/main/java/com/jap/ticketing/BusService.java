@@ -21,4 +21,17 @@ public class BusService {
 
     public BusService() {
     }
+
+    public BusService(String scheduleNo, String routeNo, int ticketFromStopId, int ticketFromStopSeqNo, int ticketTillStopId, int ticketTillStopSeqNo, String ticketDate, double ticketTime, int totalTicketAmount, double travelledKM) {
+        this.scheduleNo = scheduleNo;
+        this.routeNo = routeNo;
+        this.ticketFromStopId = ticketFromStopId;
+        this.ticketFromStopSeqNo = ticketFromStopSeqNo;
+        this.ticketTillStopId = ticketTillStopId;
+        this.ticketTillStopSeqNo = ticketTillStopSeqNo;
+        this.ticketDate = ticketDate;
+        this.ticketTime = ticketTime;
+        this.totalTicketAmount = totalTicketAmount;
+        this.travelledKM = travelledKM;
+    }
 }
